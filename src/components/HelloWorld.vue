@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <button @click="greet">greet</button>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -117,6 +118,14 @@ export default Vue.extend({
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  methods: {
+    greet() {
+      const display = (str: string): void => {
+        alert(str);
+      };
+      display("can i alert with ie11???");
+    }
   }
 });
 </script>
